@@ -10,7 +10,9 @@ app.get("/demo",(req,res)=>{
     res.send('Hello World!');
 })
 
-app.listen(4000,()=>{
+const port = process.env.port || 4000;
+
+app.listen(port,()=>{
     console.log("Node API is running on port 4000");
 });
 
