@@ -1,4 +1,5 @@
 const express = require("express");
+const port = process.env.port || 8000;
 const app = express();
 
 app.get("/",(req,res)=>{
@@ -10,10 +11,9 @@ app.get("/demo",(req,res)=>{
     res.send('Hello World!');
 })
 
-const port = process.env.port || 4000;
 
 app.listen(port,()=>{
-    console.log("Node API is running on port 4000");
+    console.log(`Node API is running on port ${port}`);
 });
 
 module.exports=app;
